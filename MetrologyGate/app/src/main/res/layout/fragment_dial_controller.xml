@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".activities.InstrumentDashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/probetrigger"
+            android:elevation="@dimen/dp_10"
+            card_view:cardCornerRadius="@dimen/dp_10"
+            android:clipToPadding="false"
+            card_view:cardUseCompatPadding="true"
+            android:padding="@dimen/dp_10"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#10000000"
+                android:orientation="vertical"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_margin="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@string/probe_trigger" />
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedViewProbeTrigger"
+                    android:layout_width="@dimen/dp_250"
+                    android:layout_height="@dimen/dp_250"
+                    android:layout_gravity="center"
+                    app:sv_centerCircleColor="@android:color/darker_gray"
+                    app:sv_highSpeedColor="@android:color/holo_red_dark"
+                    app:sv_indicatorColor="@android:color/darker_gray"
+                    app:sv_lowSpeedPercent="70"
+                    app:sv_markColor="@android:color/black"
+                    app:sv_maxSpeed="100000"
+                    app:sv_mediumSpeedColor="@android:color/holo_red_dark"
+                    app:sv_minSpeed="0"
+                    app:sv_speedTextColor="@android:color/transparent"
+                    app:sv_speedometerMode="NORMAL"
+                    app:sv_unit=" "
+                    app:sv_unitSpeedInterval="@dimen/dp_10" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/xAxis"
+            android:layout_below="@+id/probetrigger"
+            android:elevation="@dimen/dp_10"
+            card_view:cardCornerRadius="@dimen/dp_10"
+            android:clipToPadding="false"
+            card_view:cardUseCompatPadding="true"
+            android:padding="@dimen/dp_10"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#10000000"
+                android:orientation="vertical"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_margin="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@string/x_axis" />
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedViewXAxis"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_gravity="center"
+                    app:sv_centerCircleColor="@android:color/darker_gray"
+                    app:sv_highSpeedColor="@android:color/holo_red_dark"
+                    app:sv_indicatorColor="@android:color/darker_gray"
+                    app:sv_lowSpeedPercent="70"
+                    app:sv_markColor="@android:color/black"
+                    app:sv_maxSpeed="100000"
+                    app:sv_mediumSpeedColor="@android:color/holo_red_dark"
+                    app:sv_minSpeed="0"
+                    app:sv_speedTextColor="@android:color/transparent"
+                    app:sv_speedometerMode="NORMAL"
+                    app:sv_unit=" "
+                    app:sv_unitSpeedInterval="@dimen/dp_10" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/yAxis"
+            android:layout_below="@+id/xAxis"
+            android:elevation="@dimen/dp_10"
+            card_view:cardCornerRadius="@dimen/dp_10"
+            android:clipToPadding="false"
+            card_view:cardUseCompatPadding="true"
+            android:padding="@dimen/dp_10"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#10000000"
+                android:orientation="vertical"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_margin="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@string/y_axis" />
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedViewYAxis"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_gravity="center"
+                    app:sv_centerCircleColor="@android:color/darker_gray"
+                    app:sv_highSpeedColor="@android:color/holo_red_dark"
+                    app:sv_indicatorColor="@android:color/darker_gray"
+                    app:sv_lowSpeedPercent="70"
+                    app:sv_markColor="@android:color/black"
+                    app:sv_maxSpeed="100000"
+                    app:sv_mediumSpeedColor="@android:color/holo_red_dark"
+                    app:sv_minSpeed="0"
+                    app:sv_speedTextColor="@android:color/transparent"
+                    app:sv_speedometerMode="NORMAL"
+                    app:sv_unit=" "
+                    app:sv_unitSpeedInterval="@dimen/dp_10" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/zAxis"
+            android:layout_marginBottom="@dimen/dp_60"
+            android:layout_below="@+id/yAxis"
+            android:elevation="@dimen/dp_10"
+            card_view:cardCornerRadius="@dimen/dp_10"
+            android:clipToPadding="false"
+            card_view:cardUseCompatPadding="true"
+            android:padding="@dimen/dp_10"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#10000000"
+                android:orientation="vertical"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_margin="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@string/z_axis" />
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedViewZAxis"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_gravity="center"
+                    app:sv_centerCircleColor="@android:color/darker_gray"
+                    app:sv_highSpeedColor="@android:color/holo_red_dark"
+                    app:sv_indicatorColor="@android:color/darker_gray"
+                    app:sv_lowSpeedPercent="70"
+                    app:sv_markColor="@android:color/black"
+                    app:sv_maxSpeed="100000"
+                    app:sv_mediumSpeedColor="@android:color/holo_red_dark"
+                    app:sv_minSpeed="0"
+                    app:sv_speedTextColor="@android:color/transparent"
+                    app:sv_speedometerMode="NORMAL"
+                    app:sv_unit=" "
+                    app:sv_unitSpeedInterval="@dimen/dp_10" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <ProgressBar
+            android:id="@+id/instrument_dashboard_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</ScrollView>
